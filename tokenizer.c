@@ -7,8 +7,8 @@
 */
 char **tokenizer(char *command)
 {
-	char *token = strtok(str, " ,\n\t\r;");
-	char **tokens = malloc(sizeof(char) * strlen(str + 1));
+	char *token = strtok(command, " ,\n\t\r;");
+	char **tokens = malloc(sizeof(char) * strlen(command + 1));
 	int pos = 0;
 
 	while (token != NULL)
@@ -18,5 +18,5 @@ char **tokenizer(char *command)
 		token = strtok(NULL, " ");
 	}
 	tokens[pos] = NULL;
-	return (0);
+	return (tokens);
 }

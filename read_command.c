@@ -33,11 +33,8 @@ char *read_command(void)
 			if (ptr)
 				command = ptr;
 			else
-			{
 				/* if the allocation didnt work free it */
-				free(command);
-				command = NULL;
-			}
+				free(command), command = NULL;
 		}
 
 		if (!command)

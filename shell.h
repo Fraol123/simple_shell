@@ -10,5 +10,6 @@
 void prompt1(void);
 void prompt2(void);
 char *read_command(void);
+char **tokenizer(char *command);
 
 #endif /* SHELL_H */

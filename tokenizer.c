@@ -2,12 +2,12 @@
 
 
 /**
- * main - tokenizes a string
- * Return: 0
+ * tokenizer - tokenizes a string
+ * @command: user entered command
+ * Return: array of strings
  */
-char **tokenaizer(char *command)
+char **tokenizer(char *command)
 {
-       
 	char *token = strtok(command, " ,\n\t\r;");
 	char **tokens = malloc(sizeof(char) * strlen(command + 1));
 	int pos = 0;

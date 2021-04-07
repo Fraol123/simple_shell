@@ -10,8 +10,10 @@
 int main(int ac, char **av)
 {
 	char *command, **tokens;
+	unsigned int i;
 	(void)ac;
 	(void)av;
+
 
 	while (1)
 	{
@@ -41,9 +43,11 @@ int main(int ac, char **av)
 
 		/* tokenize the string */
 		tokens = tokenizer(command);
-
+		/*to print array */
+		for (i = 0; tokens && tokens[i]; i++)
+			printf("%s\n",tokens[i]);
 		/* for now just print the entered command */
-		printf("%s\n", command);
+		/*printf("%s\n", command);*/
 
 		/* preventing memory leaks */
 		free(command);

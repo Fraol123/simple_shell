@@ -13,18 +13,9 @@ char *read_command(void)
 	size_t len = 0;
 	ssize_t linesize = 0;
 	char ptrlen = 0;
-	/**
-	 *  using getline read user input
-	 * and store num of chars in line
-	 *as long as the line is not -1 it continues
-	 */
+
 	while ((linesize = getline(&line, &len, stdin)) != -1)
 	{
-		/**
-		 *  if comand is null allocate space equal to
-		 *  number of chars read + 1 for NULL
-		 *  if not null reallocate the space to comand inside
-		 */
 		if (!command)
 			command = malloc(linesize + 1);
 		else
@@ -33,10 +24,8 @@ char *read_command(void)
 			if (ptr)
 				command = ptr;
 			else
-				/* if the allocation didnt work free it */
 				free(command), command = NULL;
 		}
-
 		if (!command)
 		{
 			perror("Error: ");
@@ -44,18 +33,14 @@ char *read_command(void)
 		}
 
 		strcpy(command + ptrlen, line);
-
-		/* if the last line is new line */
-		if (line[linesize - 1] == '\n')
+			if (line[linesize - 1] == '\n')
 		{
 			if (linesize == 1 || line[linesize - 2] != '\\')
 				return (command);
-			/* dont touch it */
 			command[ptrlen + linesize - 2] = '\0';
 			linesize -= 2;
 			prompt2();
 		}
-
 		ptrlen += linesize;
 	}
 

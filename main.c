@@ -9,7 +9,7 @@
 */
 int main(int ac, char **av)
 {
-	char *command;
+	char *command, **tokens;
 	(void)ac;
 	(void)av;
 
@@ -39,11 +39,15 @@ int main(int ac, char **av)
 			break;
 		}
 
+		/* tokenize the string */
+		tokens = tokenizer(command);
+
 		/* for now just print the entered command */
 		printf("%s\n", command);
 
 		/* preventing memory leaks */
 		free(command);
+		free(tokens);
 	}
 	return (0);
 }

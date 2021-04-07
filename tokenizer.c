@@ -1,28 +1,29 @@
 #include "shell.h"
 
-
-char *strtok(char *comands, const char *delim)
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+/**
+ * main - tokenizes a string
+ * Return: 0
+ */
+int main(void)
 {
-        comands;
-        delim = " /t/n/r";
-        char *token;
-        char *line = NULL;
-        size_t i;
+        char str[] = "This better work bana";
+        char *token ;
+        token  = strtok(str, " ,\n\t\r;");
+        char **tokens = malloc(sizeof(char) * strlen(str + 1));
+        int pos = 0;
 
-        if (line == NULL || comands == NULL) 
-                return (NULL); 
-        token = strtok(line, delim); 
-        while (token != NULL) 
-        { 
-                comands[i] = strdup(token); 
-                if (comands[i] == NULL) 
-                { 
-                        free(comands);
-                        return (NULL);
-                }
-		comands[i] = token;
-		return (comands);
-	}
+	while(token != NULL)
+        {
+                tokens[pos] = token;
+                printf("tokens[%d] is : %s \n",pos, tokens[pos]);
+                pos++;
+                token = strtok(NULL, " ");
+        }
+
+	tokens[pos] = NULL;
+	return (0);
 }
-
 

@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
  *reallocate- adds extera memomry
- *@pointer: ptr to previouslly allocated memory 
+ *@pointer: ptr to previouslly allocated memory
  *@size: new size
  *Return: new pointer
  */

@@ -1,5 +1,10 @@
 #include "shell.h"
-
+/**
+ *reallocate- adds extera memomry
+ *@pointer: old pointer
+ *@size: size of reallocation
+ *Return: new pointer
+ */
 
 
 char **reallocate(char **pointer, size_t *size)
@@ -13,7 +18,7 @@ char **reallocate(char **pointer, size_t *size)
 		free(pointer);
 		return (NULL);
 	}
-	/* coping the old ptr to new */ 
+	/* coping the old ptr to new */
 	for (i = 0; i < (*size); i++)
 	{
 		new_pointer[i] = pointer[i];
@@ -23,4 +28,3 @@ char **reallocate(char **pointer, size_t *size)
 	free(pointer);
 	return (new_pointer);
 }
-	

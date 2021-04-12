@@ -35,6 +35,7 @@ Our shell includes the following files:
 
 ### How to Install
 Clone the below repository and compile the files into an executable using the GCC compiler.
+
 ```
 https://github.com/Fraol123/simple_shell.git
 
@@ -46,17 +47,6 @@ This code was compiled with the following flags:
 
 ### Example Code
 
-```
-
-
-
-
-
-
-
-
-
-```
 ### Authors
 
 * [**Fraol Tolera**](https://github.com/Fraol123)

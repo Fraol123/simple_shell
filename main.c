@@ -40,15 +40,18 @@ int main(int ac, char **av)
 			free(command);
 			break;
 		}
+		if (strcmp(command, "env\n") == 0)
+                {
+                        print_env();
+                        break;
+                }
 
 		/* tokenize the string */
 		tokens = tokenizer(command);
-		/*to print array */
+		/*to print array  */
 		for (i = 0; tokens && tokens[i]; i++)
 			printf("%s\n",tokens[i]);
-		/* for now just print the entered command */
-		/*printf("%s\n", command);*/
-
+		
 		/* preventing memory leaks */
 		free(command);
 		free(tokens);

@@ -1,10 +1,18 @@
 #include "shell.h"
 /**
+<<<<<<< HEAD
  *reallocate- adds extera memomry
  *@pointer: ptr to previouslly allocated memory
  *@size: new size
  *Return: new pointer
  */
+=======
+* reallocate- adds extera memomry
+* @pointer: ptr to previouslly allocated memory
+* @size: new size
+* Return: new pointer
+*/
+>>>>>>> trial
 
 
 char **reallocate(char **pointer, size_t *size)

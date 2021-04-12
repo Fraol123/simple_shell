@@ -38,7 +38,7 @@ char *read_command(void)
 			if (linesize == 1 || line[linesize - 2] != '\\')
 				free(line);
 				return (command);
-			command[ptrlen + linesize - 2] = '\0';
+				command[ptrlen + linesize - 2] = '\0';
 			linesize -= 2;
 			prompt2();
 		}

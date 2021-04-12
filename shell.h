@@ -7,10 +7,16 @@
 #include <errno.h>
 #include <unistd.h>
 
+extern char **environ;
+
 void prompt1(void);
 void prompt2(void);
 char *read_command(void);
 char **tokenizer(char *command);
 char **reallocate(char **pointer, size_t *size);
+int print_env(void);
+int _strcmp(char *s1, char *s2);
+int _putchar(char c);
+int print_s(char *s);
 
 #endif /* SHELL_H */

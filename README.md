@@ -1,2 +1,2 @@
 # simple_shell
-Building simple shell
+A simple shell built in team of three

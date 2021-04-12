@@ -41,7 +41,6 @@ int main(int ac, char **av)
 		if (_strcmp(command, "env\n") == 0)
     {
       print_env();
-      break;
     }
 		/* tokenize the string */
 		tokens = tokenizer(command);

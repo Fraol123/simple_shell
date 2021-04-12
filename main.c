@@ -37,27 +37,20 @@ int main(int ac, char **av)
 			free(command);
 			break;
 		}
-<<<<<<< HEAD
-=======
 		if (_strcmp(command, "env\n") == 0)
                 {
                         print_env();
                         break;
                 }
 
->>>>>>> trial
 		/* tokenize the string */
 		tokens = tokenizer(command);
 		/*to print array  */
 		for (i = 0; tokens && tokens[i]; i++)
-<<<<<<< HEAD
-			printf("%s\n", tokens[i]);
-=======
 		{
 			print_s(tokens[i]);
 			_putchar('\n');
 		}
->>>>>>> trial
 		/* preventing memory leaks */
 		free(command);
 		free(tokens);

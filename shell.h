@@ -15,5 +15,6 @@ char *read_command(void);
 char **tokenizer(char *command);
 char **reallocate(char **pointer, size_t *size);
 int print_env(void);
+int _strcmp(char *s1, char *s2);
 
 #endif /* SHELL_H */

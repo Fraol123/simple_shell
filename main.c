@@ -28,19 +28,19 @@ int main(int ac, char **av)
 			exit(EXIT_SUCCESS);
 
 		/* if user entered a newline or the command is null skip this iteration */
-		if (command[0] == '\0' || strcmp(command, "\n") == 0)
+		if (command[0] == '\0' || _strcmp(command, "\n") == 0)
 		{
 			free(command);
 			continue;
 		}
 
 		/* if the user entered exit end the loop */
-		if (strcmp(command, "exit\n") == 0)
+		if (_strcmp(command, "exit\n") == 0)
 		{
 			free(command);
 			break;
 		}
-		if (strcmp(command, "env\n") == 0)
+		if (_strcmp(command, "env\n") == 0)
                 {
                         print_env();
                         break;

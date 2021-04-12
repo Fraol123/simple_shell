@@ -1,10 +1,8 @@
 #include "shell.h"
-
 /**
 * main - carries out the read, execute then print output loop
 * @ac: argument count
 * @av: argument vector
-*
 * Return: 0
 */
 int main(int ac, char **av)
@@ -13,7 +11,6 @@ int main(int ac, char **av)
 	unsigned int i;
 	(void)ac;
 	(void)av;
-
 
 	while (1)
 	{
@@ -40,12 +37,12 @@ int main(int ac, char **av)
 			free(command);
 			break;
 		}
-		if (_strcmp(command, "env\n") == 0)
-                {
-                        print_env();
-                        break;
-                }
 
+		if (_strcmp(command, "env\n") == 0)
+    {
+      print_env();
+      break;
+    }
 		/* tokenize the string */
 		tokens = tokenizer(command);
 		/*to print array  */

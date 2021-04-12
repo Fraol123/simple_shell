@@ -6,7 +6,6 @@
 * Return: new pointer
 */
 
-
 char **reallocate(char **pointer, size_t *size)
 {
 	char **new_pointer;

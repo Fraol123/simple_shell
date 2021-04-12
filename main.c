@@ -50,8 +50,10 @@ int main(int ac, char **av)
 		tokens = tokenizer(command);
 		/*to print array  */
 		for (i = 0; tokens && tokens[i]; i++)
-			printf("%s\n",tokens[i]);
-		
+		{
+			print_s(tokens[i]);
+			_putchar('\n');
+		}
 		/* preventing memory leaks */
 		free(command);
 		free(tokens);

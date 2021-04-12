@@ -6,7 +6,7 @@
 */
 void prompt1(void)
 {
-	fprintf(stderr, "$ ");
+	print_s("$ ");
 }
 
 /**
@@ -15,5 +15,5 @@ void prompt1(void)
 */
 void prompt2(void)
 {
-	fprintf(stderr, "> ");
+	print_s("> ");
 }

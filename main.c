@@ -25,23 +25,32 @@ int main(int ac, char **av)
 			exit(EXIT_SUCCESS);
 
 		/* if user entered a newline or the command is null skip this iteration */
-		if (command[0] == '\0' || strcmp(command, "\n") == 0)
+		if (command[0] == '\0' || _strcmp(command, "\n") == 0)
 		{
 			free(command);
 			continue;
 		}
 
 		/* if the user entered exit end the loop */
-		if (strcmp(command, "exit\n") == 0)
+		if (_strcmp(command, "exit\n") == 0)
 		{
 			free(command);
 			break;
 		}
+
+		if (_strcmp(command, "env\n") == 0)
+    {
+      print_env();
+      break;
+    }
 		/* tokenize the string */
 		tokens = tokenizer(command);
-		/*to print array */
+		/*to print array  */
 		for (i = 0; tokens && tokens[i]; i++)
-			printf("%s\n", tokens[i]);
+		{
+			print_s(tokens[i]);
+			_putchar('\n');
+		}
 		/* preventing memory leaks */
 		free(command);
 		free(tokens);

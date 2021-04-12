@@ -37,7 +37,8 @@ Our shell includes the following files:
 Clone the below repository and compile the files into an executable using the GCC compiler.
 
 ```
-https://github.com/Fraol123/simple_shell.git
+https://github.com/Fraol123/simple_shell.git.
+```
 
 
 ### Compilation
@@ -46,6 +47,9 @@ This code was compiled with the following flags:
      (ALX) $ gcc -Wall -Werror -pedantic *.c -o hsh
 
 ### Example Code
+```
+$ ls -l
+```
 
 ### Authors
 

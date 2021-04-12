@@ -20,5 +20,8 @@ int print_env(void);
 int _strcmp(char *s1, char *s2);
 int _putchar(char c);
 int print_s(char *s);
+char *_strcat(char *dest, char *src);
+char *_strstr(char *haystack, char *needle);
+int execution(char **args);
 
 #endif /* SHELL_H */

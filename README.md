@@ -1,10 +1,6 @@
-##
+# 0x16. C - Simple Shell
 
-# shell
-
-This is our simple Shell implementation. If you want to learn about SHELL, you can this file or you can go to the *simple_shell* documentat>
-
-This project was created to **ALX-Holberton School.**
+This project is an implementation of the shell created as the final project for the C code sprint at **ALX Africa**.
 
 ## Table of contents :clipboard:
 
@@ -12,84 +8,43 @@ This project was created to **ALX-Holberton School.**
  - [Installation]
  - [Usage]
  - [Example]
- - [File Structure]
-## Description: small_red_triangle_down:
-This is a shell written in c for final project of ALX-Holberton School. simple_shell its based on sh and support just the main functionalities.
+ - [Contributors]
+ - [Acknowledgements]
+## Description :e-mail:
+This is a shell written in [C](https://en.wikipedia.org/wiki/C_(programming_language)).
+It is based on [the Thompson Shell](https://en.wikipedia.org/wiki/Thompson_shell).
 
-The project structure can't have source inside directories, because the only way for compile in this case is gcc -Wall -Werror -Wextra -pedanti>
-
-## Installation :floppy_disk:
+## Installation :wrench:
 Clone the below repository and compile the files into an executable using the GCC compiler.
 ```
 https://github.com/Fraol123/simple_shell.git.
 ```
-##Environment
+##Environment :evergreen_tree::evergreen_tree:
+
 Our shell was built and tested on  Ubuntu 14.04 LTS.
 
-### Basic usage
-`./hsh`
+### Basic usage :bulb:
+- First, [fork this repository](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).
+- Then [clone it to your local machine](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+- Create an executable by running the following command:
+- `gcc -Wall -Werror -Wextra -pedantic *.c -o hsh`
+- From there, type in the following command and press your enter button.
+- `./hsh`
+- Final step: ENJOY!
+
 ## Example :computer:
 ```
 ls -la
 ```
-=======
-This is our simple Shell implementation. If you want to learn about SHELL, you can see this file or you can go to the *simple_shell* documentation>
+![screenshot of shell](https://user-images.githubusercontent.com/30075600/114757753-e50c2180-9d64-11eb-95ea-fb9bba776c8c.png)
 
-This project was created to **ALX-Holberton School.**
-
-## Table of contents :clipboard:
-
- - [Description]
-  - [Installation]
-   - [Usage]
-    - [Example]
-     - [File Structure]
-     ## Description: small_red_triangle_down:
-     This is a shell written in c for the final project of ALX-Holberton School. simple_shell is based on sh and supports just the main functionalities.
-
-The project structure can't have a source inside directories, because the only way to compile in this case is gcc -Wall -Werror -Wextra -pedanti>
-
-## Installation :floppy_disk:
-Clone the below repository and compile the files into an executable using the GCC compiler.
-```
-https://github.com/Fraol123/simple_shell.git.
-```
-##Environment
-Our shell was built and tested on  Ubuntu 14.04 LTS.
-### Basic usage
-`./hsh`
-## Example :computer:
-```
-ls -la
-```
-
-## Contributors
+## Contributors :sunglasses::muscle:
 * [**Fraol Tolera**](https://github.com/Fraol123)
 * [**Andrew Mukare**](https://github.com/JudgeFudge19)
 * [**Ermias Teshome**](https://github.com/ermiast)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> f04e7cd1d74e1540b4b481f5ca791e4f66d557ce
-
-
+## Acknowledgments :pray:
+- Our fellow cohort members.
+- The creators of the C language.
+- Our software engineer-in-residence.
+- Betty Holberton.

@@ -20,6 +20,9 @@ void prompt_user(void);
 void handle_signal(int m);
 char *read_command(void);
 char **tokenizer(char *line);
+char *test_path(char **path, char *command);
+char *append_path(char *path, char *command);
+
 char **reallocate(char **pointer, size_t *size);
 int print_env(void);
 int _strcmp(char *s1, char *s2);

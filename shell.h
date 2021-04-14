@@ -19,7 +19,7 @@ int checker(char **cmd, char *buf);
 void prompt_user(void);
 void handle_signal(int m);
 char *read_command(void);
-char **tokenizer(char *command);
+char **tokenizer(char *line);
 char **reallocate(char **pointer, size_t *size);
 int print_env(void);
 int _strcmp(char *s1, char *s2);

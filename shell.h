@@ -13,12 +13,12 @@
 
 /* environment variables */
 extern char **environ;
+extern __sighandler_t signal(int __sig, __sighandler_t __handler);
 
 /* handle built ins */
 int checker(char **cmd, char *buf);
 void prompt_user(void);
 void handle_signal(int m);
-char *read_command(void);
 char **tokenizer(char *line);
 char *test_path(char **path, char *command);
 char *append_path(char *path, char *command);
@@ -35,13 +35,26 @@ char *_strdup(char *s);
 char *_strchr(char *s, char c);
 
 void execution(char *cp, char **cmd);
-int search(char **args);
-int search_dirs(char **command, char **args);
 char *find_path(void)
-int interpreter(char **args);
 
 /* helper function for efficient free */
 void free_buffers(char **buf);
 
+struct builtins
+{
+	char *env;
+	char *exit;
+} builtins;
+
+struct info
+{
+	int final_exit;
+	int ln_count;
+} info;
+
+struct flags
+{
+	bool interactive;
+} flags;
 
 #endif /* SHELL_H */

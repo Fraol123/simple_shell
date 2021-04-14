@@ -6,34 +6,23 @@
 *
 * Return: 0
 */
-int execution(char **args)
+void execution(char *cp, char **cmd)
 {
 	pid_t child_pid;
 	int status;
-	char *new_comm = "/bin/";
-	char *envp[] = {"PATH=/bin", NULL};
+	char **env = environ;
 
 	child_pid = fork();
-
+	if (child_pid < 0)
+		perror(cp);
 	if (child_pid == 0)
 	{
-		if (_strstr(args[0], new_comm))
-		{
-			if (execve(args[0], args, envp) == -1)
-				exit(EXIT_FAILURE);
-			printf("%s\n", args[0]);
-		}
-		if (!(_strstr(args[0], new_comm)))
-		{
-			_strcat(new_comm, args[0]);
-			if (execve(new_comm, args, envp) == -1)
-				exit(EXIT_FAILURE);
-			printf("%s\n", new_comm);
-		}
+		execve(cp, cmd, env);
+		perror(cp);
+		free(cp);
+		free_buffer(cmd);
+		exit(98);
 	}
 	else
-	{
 		wait(&status);
-	}
-	return (0);
 }

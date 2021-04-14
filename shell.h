@@ -30,7 +30,7 @@ int _putchar(char c);
 int print_s(char *s);
 char *_strcat(char *dest, char *src);
 char *_strstr(char *haystack, char *needle);
-int execution(char **args);
+void execution(char *cp, char **cmd);
 int search(char **args);
 int search_dirs(char **command, char **args);
 char *find_path(void)

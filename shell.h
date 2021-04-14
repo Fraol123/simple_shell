@@ -11,10 +11,12 @@
 #include <sys/stat.h>
 #include <time.h>
 
+/* environment variables */
 extern char **environ;
 
-void prompt1(void);
-void prompt2(void);
+/* handle built ins */
+void prompt_user(void);
+void handle_signal(int m);
 char *read_command(void);
 char **tokenizer(char *command);
 char **reallocate(char **pointer, size_t *size);

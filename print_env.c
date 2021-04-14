@@ -8,7 +8,7 @@
 void print_env(void)
 {
 	int x = 0;
-	char *env = environ;
+	char **env = environ;
 
 	while (env[x])
 	{

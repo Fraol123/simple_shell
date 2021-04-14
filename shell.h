@@ -10,6 +10,7 @@
 #include <sys/wait.h>
 #include <sys/stat.h>
 #include <time.h>
+#include <stdbool.h>
 
 /* environment variables */
 extern char **environ;
@@ -30,21 +31,21 @@ void print_env(void);
 /* string handlers */
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
-int _strncmp(char *s1, char *s2, n);
+int _strncmp(char *s1, char *s2, int n);
 char *_strdup(char *s);
 char *_strchr(char *s, char c);
 
 void execution(char *cp, char **cmd);
-char *find_path(void)
+char *find_path(void);
 
 /* helper function for efficient free */
 void free_buffers(char **buf);
 
-struct builtins
+struct builtin
 {
 	char *env;
 	char *exit;
-} builtins;
+} builtin;
 
 struct info
 {

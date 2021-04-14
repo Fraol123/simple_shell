@@ -11,7 +11,7 @@ int checker(char **cmd, char *buf)
 		return (1);
 	else if (**cmd == '/')
 	{
-		execute(cmd[0], cmd);
+		execution(cmd[0], cmd);
 		return (1);
 	}
 	return (0);

@@ -1,5 +1,5 @@
-"manpage for Simple_shell. Simple shell project to ALX- Holberton School.
-.TH simple_shell 0                             "14 April 2021" "1.0"                                              "simple_shell man page"
+" manpage for Simple_shell. Simple shell project to ALX- Holberton School.
+.TH simple_shell 0                             "14 April 2021" "1.0"                                                  "simple_shell man page"
 SH NAME
 .B ./hsh
 - A simple UNIX command line interpreter.
@@ -22,8 +22,7 @@ is invoked by the command:
 .\&$ ./hsh
         A prompt will appear for the user to enter and execute commands by typing comma
         nd names and pressing the return key. A user can also pipe commands into the pr
-        ogram via the pipe character '|'. 
-For example:
+        ogram via the pipe character '|'. For example:
 .br
 \&$ echo "hello world" | ./hsh
 .SH INSTALLATION
@@ -31,6 +30,7 @@ For example:
 .br
 
 .B git clone https://github.com/Fraol123/simple_shell.git
+
 br
 
 .I Compile files using:
@@ -39,7 +39,6 @@ br
 .B gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 .br
 .br
-
 .SH EXAMPLE
 $ ./hsh
 .br
@@ -56,6 +55,3 @@ Only one error message will print upon failure. If any further bugs are found pl
 
 .SH AUTHORS
 written by Fraol Tolera & Andrew Mukare with contrubiton by Ermias Teshome
-
-
-

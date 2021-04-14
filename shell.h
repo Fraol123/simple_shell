@@ -30,4 +30,7 @@ int search_dirs(char **command, char **args);
 char *find_path(char *name);
 int interpreter(char **args);
 
+/* helper function for efficient free */
+void free_buffers(char **buf);
+
 #endif /* SHELL_H */

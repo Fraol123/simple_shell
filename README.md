@@ -1,6 +1,6 @@
 # Simple Shell
 ### Synopsis
-The simple shell project is a collaborative project to explore and understand the functionality and implementation of the shell command languag>
+The simple shell project is a collaborative project to explore and understand the functionality and implementation of the shell command languag
 
 ### Environment
 Our shell was built and tested in the Ubuntu 14.04 LTS.
@@ -17,7 +17,7 @@ Our shell includes the following files:
 |promt_user.c| contains prompt1 and prompt2 function|
 |read_command.c| contains read_command function|
 |reallocate.c| contains the reallocate function|
-|nano main.c| contains the main function|
+| main.c| contains the main function|
 
 
 ### Description of Functions

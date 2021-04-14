@@ -13,25 +13,27 @@ This project was created to **ALX-Holberton School.**
  - [Usage]
  - [Example]
  - [File Structure]
-## Description: small_red_triangle_down:
+## Description :e-mail:
 This is a shell written in c for final project of ALX-Holberton School. simple_shell its based on sh and support just the main functionalities.
 
 The project structure can't have source inside directories, because the only way for compile in this case is gcc -Wall -Werror -Wextra -pedanti>
 
-## Installation :floppy_disk:
+## Installation :wrench:
 Clone the below repository and compile the files into an executable using the GCC compiler.
 ```
 https://github.com/Fraol123/simple_shell.git.
 ```
-##Environment
+##Environment :evergreen_tree: :evergreen_tree:
 Our shell was built and tested on  Ubuntu 14.04 LTS.
 
-### Basic usage
+### Basic usage :bulb:
 `./hsh`
 ## Example :computer:
 ```
 ls -la
 ```
+![screenshot of shell](https://user-images.githubusercontent.com/30075600/114757753-e50c2180-9d64-11eb-95ea-fb9bba776c8c.png)
+
 =======
 This is our simple Shell implementation. If you want to learn about SHELL, you can see this file or you can go to the *simple_shell* documentation>
 
@@ -67,29 +69,3 @@ ls -la
 * [**Fraol Tolera**](https://github.com/Fraol123)
 * [**Andrew Mukare**](https://github.com/JudgeFudge19)
 * [**Ermias Teshome**](https://github.com/ermiast)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> f04e7cd1d74e1540b4b481f5ca791e4f66d557ce
-
-

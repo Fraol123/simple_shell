@@ -22,9 +22,10 @@ char *read_command(void);
 char **tokenizer(char *line);
 char *test_path(char **path, char *command);
 char *append_path(char *path, char *command);
+int handle_builtin(char **command, char *line);
 
 char **reallocate(char **pointer, size_t *size);
-int print_env(void);
+void print_env(void);
 int _strcmp(char *s1, char *s2);
 int _putchar(char c);
 int print_s(char *s);

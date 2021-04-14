@@ -7,10 +7,10 @@
 */
 int main(int ac, char **av)
 {
-	char *command, **tokens;
+	char *command, **args, **tokens;
 	(void)ac;
 	(void)av;
-
+	args = NULL;
 	while (1)
 	{
 		/* prompt the user to enter a command */
@@ -38,13 +38,19 @@ int main(int ac, char **av)
 		}
 
 		if (_strcmp(command, "env\n") == 0)
-    {
-      print_env();
-    }
+		{
+			print_env();
+		}
 		/* tokenize the string */
 		tokens = tokenizer(command);
 
 		execution(tokens);
+		if (args != NULL && args[0] != NULL)
+                {
+                        if (interpreter(args) == -1)
+				return (0);
+                }
+
 		/* preventing memory leaks */
 		free(command);
 		free(tokens);

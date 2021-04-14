@@ -1,56 +1,105 @@
 #include "shell.h"
 
 /**
-* _strstr - locates a substring
-* @haystack: string to be checked
-* @needle: to be located in haystack
+* _strcmp - compares two strings
+* @s1: compared to s2;
+* @s2: compared to s1;
 *
-* Return: pointer to beginning of needle or NULL
-* if needle not found
+* Return: returns difference between strings
 */
-char *_strstr(char *haystack, char *needle)
+int _strcmp(char *s1, char *s2)
 {
-	int i;
+	int i = 0, output;
 
-	if (*needle == '\0')
-		return (haystack);
+	while (*(s1 + i) == *(s2 + i) && *(s1 + i) != '\0')
+		i++;
 
-	for (i = 0; *(haystack + i) != '\0'; i++)
-	{
-		if (*(haystack + i) == *needle)
-		{
-			char *ptr = _strstr(haystack + i + 1, needle + 1);
+	output = (*(s1 + i) - *(s2 + i));
 
-			return ((ptr) ? ptr - 1 : NULL);
-		}
-	}
-	return (NULL);
+	return (output);
 }
 
 /**
-* _strcat - concatenates two strings
-* @dest: to be concatenated to
-* @src: to be concatenated to dest
+* _strlen - returns the length of a string
+* @s: string passed
 *
-* Return: dest
+* Return: returns length of string passed
 */
-char *_strcat(char *dest, char *src)
+int _strlen(char *s)
 {
-	int i = 0, j = 0;
+	int count = 0;
 
-	while (*(dest + i) != '\0')
+	while (*s != '\0')
 	{
-		i++;
-		j++;
+		count++;
+		s++;
 	}
+	return (count);
+}
 
-	i = 0;
-	while (*(src + i) != '\0')
+/**
+* _strncmp - compares two strings up to n bytes
+* @s1: compared to s2
+* @s2: compared to s1
+* @n: number of bytes
+*
+* Return: difference between s1 and s2
+*/
+int _strncmp(char *s1, char *s2, int n)
+{
+	int i;
+	
+	for (i = 0; s1[i] && s2[i] & i < n; i++)
 	{
-		dest[j] = src[i];
-		i++;
-		j++;
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 	}
-	dest[j] = '\0';
-	return (dest);
+	return (0);
+}
+
+/**
+* _strdup - dupicates string
+* @s: to be duplicated
+*
+* Return: pointer to duplicate string
+*/
+char *_strdup(char *s)
+{
+	char *ptr;
+	int i, len;
+
+	if (s == NULL)
+		return (NULL);
+
+	len = _strlen(s);
+
+	ptr = malloc(sizeof(char) * (len + 1));
+	if (!ptr)
+		return (NULL);
+	for (i = 0; *s != '\0'; s++, i++)
+		ptr[i] = s[0];
+
+	ptr[i++] = '\0';
+	return (ptr);
+}
+
+/**
+* _strchr - locates a character in a string
+* @s: string to be checked
+* @c: character to be located
+*
+* Return: returns pointer to first occurence of character
+* or NULL if character not found
+*/
+char *_strchr(char *s, char c)
+{
+	while (*s)
+	{
+		if (*s == c)
+			return (s);
+		s++;
+	}
+	if (!c)
+		return (s);
+	return (NULL);
 }

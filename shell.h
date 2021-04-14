@@ -15,6 +15,7 @@
 extern char **environ;
 
 /* handle built ins */
+int checker(char **cmd, char *buf);
 void prompt_user(void);
 void handle_signal(int m);
 char *read_command(void);
@@ -34,5 +35,6 @@ int interpreter(char **args);
 
 /* helper function for efficient free */
 void free_buffers(char **buf);
+
 
 #endif /* SHELL_H */

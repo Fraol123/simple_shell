@@ -1,21 +1,27 @@
 #include "shell.h"
 
 /**
-* find_path - finds the path of a function based on program name
-* @name: name of program
-*
-* Return: absolute path to program
+* find_path - finds the path from the global enviroment
+* Return: NULL if path is not found or path if path is found.
 */
-char *find_path(char *name)
+char *find_path(void)
 {
 	int x;
+	char **env = environ, *path = NULL;
 
-	for (x = 0; environ[x] != NULL; x++)
+	while (*env)
 	{
-		if (strcmp(environ[x], name) == 0)
-			break;
-		else if (environ[x + 1] == NULL)
-			perror("find path");
+		if (_strncmp(*env, "PATH=", 5) == 0)
+		{
+			path = *env;
+			while (*path && x < 5)
+			{
+				path++;
+				x++;
+			}
+			return (path);
+		}
+		env++;
 	}
-	return (environ[x]);
+	return (NULL);
 }

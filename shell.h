@@ -30,7 +30,7 @@ char *_strstr(char *haystack, char *needle);
 int execution(char **args);
 int search(char **args);
 int search_dirs(char **command, char **args);
-char *find_path(char *name);
+char *find_path(void)
 int interpreter(char **args);
 
 /* helper function for efficient free */

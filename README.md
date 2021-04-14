@@ -22,7 +22,7 @@ Clone the below repository and compile the files into an executable using the GC
 ```
 https://github.com/Fraol123/simple_shell.git.
 ```
-##Environment :evergreen_tree: :evergreen_tree:
+##Environment :evergreen_tree::evergreen_tree:
 
 Our shell was built and tested on  Ubuntu 14.04 LTS.
 
@@ -41,12 +41,12 @@ ls -la
 ```
 ![screenshot of shell](https://user-images.githubusercontent.com/30075600/114757753-e50c2180-9d64-11eb-95ea-fb9bba776c8c.png)
 
-## Contributors
+## Contributors :sunglasses::muscle:
 * [**Fraol Tolera**](https://github.com/Fraol123)
 * [**Andrew Mukare**](https://github.com/JudgeFudge19)
 * [**Ermias Teshome**](https://github.com/ermiast)
 
-## Acknowledgments
+## Acknowledgments :pray:
 - Our fellow cohort members.
 - The creators of the C language.
 - Our software engineer-in-residence.

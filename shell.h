@@ -25,13 +25,15 @@ char *append_path(char *path, char *command);
 int handle_builtin(char **command, char *line);
 void exit_cmd(char **command, char *line);
 
-char **reallocate(char **pointer, size_t *size);
 void print_env(void);
+
+/* string handlers */
 int _strcmp(char *s1, char *s2);
-int _putchar(char c);
-int print_s(char *s);
-char *_strcat(char *dest, char *src);
-char *_strstr(char *haystack, char *needle);
+int _strlen(char *s);
+int _strncmp(char *s1, char *s2, n);
+char *_strdup(char *s);
+char *_strchr(char *s, char c);
+
 void execution(char *cp, char **cmd);
 int search(char **args);
 int search_dirs(char **command, char **args);

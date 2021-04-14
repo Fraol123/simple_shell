@@ -12,7 +12,7 @@ void free_buffers(char **buf)
 
 	if (!buf || buf == NULL)
 		return;
-	while(buf[i])
+	while (buf[i])
 	{
 		free(buf[i]);
 		i++;

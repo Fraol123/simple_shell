@@ -18,8 +18,7 @@ char *test_path(char **path, char *command)
 		output = append_path(path[i], command);
 		if (access(output, F_OK | X_OK) == 0)
 			return (output);
-		else
-			free (output);
+		free(output);
 		i++;
 	}
 	return (NULL);

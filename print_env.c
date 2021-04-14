@@ -5,14 +5,15 @@
 *
 * Return: 0
 */
-int print_env(void)
+void print_env(void)
 {
-	int x;
+	int x = 0;
+	char *env = environ;
 
-	for (x = 0; environ[x] != NULL; x++)
+	while (env[x])
 	{
-		write(STDOUT_FILENO, environ[x], strlen(environ[x]));
+		write(STDOUT_FILENO, (const void *)env[x], _strlen(env[x]));
 		write(STDOUT_FILENO, "\n", 1);
+		x++;
 	}
-	return (0);
 }

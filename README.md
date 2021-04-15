@@ -19,7 +19,7 @@ Clone the below repository and compile the files into an executable using the GC
 ```
 https://github.com/Fraol123/simple_shell.git.
 ```
-##Environment :evergreen_tree::evergreen_tree:
+## Environment :evergreen_tree::evergreen_tree:
 
 Our shell was built and tested on  Ubuntu 14.04 LTS.
 
